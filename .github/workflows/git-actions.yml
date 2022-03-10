@@ -7,9 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      
-      - name: aufdenpunkt/python-safety-check
-        run: pip install aufdenpunkt/python-safety-check
+      - name: Check out master
+        uses: actions/checkout@master
+
+      - name: Security vulnerabilities scan
+        uses: aufdenpunkt/python-safety-check@master
