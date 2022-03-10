@@ -8,8 +8,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out master
-        uses: actions/checkout@master
-
-      - name: Security vulnerabilities scan
-        uses: aufdenpunkt/python-safety-check@master
+      - name: Python Safety Check
+        uses: aufdenpunkt/python-safety-check@v1.0.4
